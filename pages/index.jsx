@@ -1,5 +1,5 @@
 import { FeaturedPosts } from '../sections/index'
-import { PostCard, Categories, PostWidget } from '../components'
+import { PostCard, Categories, PostWidget } from '../Components'
 import { getPosts } from '../services'
 
 export default function Home({ posts }) {
@@ -9,6 +9,7 @@ export default function Home({ posts }) {
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
           {posts.map((post, index) => (
+            // eslint-disable-next-line react/no-array-index-key
             <PostCard key={index} post={post.node} />
           ))}
         </div>
@@ -20,13 +21,13 @@ export default function Home({ posts }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const posts = (await getPosts()) || []
+  const posts = (await getPosts()) || [];
   return {
     props: { posts },
-  }
+  };
 }
