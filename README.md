@@ -5,7 +5,7 @@
 ### Introduction
 _________________________________________________________________________________________
 
- Fully responsive CMS Blog App is the Blog Application.
+ Fully responsive and dynamic Blog App with CMS.
  
  ### Tech
 _________________________________________________________________________________________
